@@ -1,0 +1,173 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+  }
+
+
+.keyboard {
+    background: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.key {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.1s;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .key:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+  }
+  
+  .key:active {
+    background-color: #b0bec5;
+    transform: scale(0.95);
+  }
+
+.main-keyboard-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+/* Первая строка */
+.key-esc { grid-column: 1; }
+.key-f1 { grid-column: 3; }
+.key-f2 { grid-column: 4; }
+.key-f3 { grid-column: 5;
+    margin-right: 20px; }
+.key-f4 { grid-column: 6; }
+.key-f5 { grid-column: 7; }
+.key-f6 { grid-column: 8;
+    margin-right: 20px; }
+.key-f7 { grid-column: 9; }
+.key-f8 { grid-column: 10; }
+.key-f9 { grid-column: 11;
+    margin-right: 20px; }
+.key-f10 { grid-column: 12; }
+.key-f11 { grid-column: 13; }
+.key-f12 { grid-column: 14; }
+.key-printscreen { grid-column: 17; }
+.key-scrolllock { grid-column: 18; }
+.key-pause { grid-column: 19; }
+
+/* Вторая строка */
+.key-backquote { grid-column: 1; }
+.key-digit1 { grid-column: 2; }
+.key-digit2 { grid-column: 3; }
+.key-digit3 { grid-column: 4; }
+.key-digit4 { grid-column: 5; }
+.key-digit5 { grid-column: 6; }
+.key-digit6 { grid-column: 7; }
+.key-digit7 { grid-column: 8; }
+.key-digit8 { grid-column: 9; }
+.key-digit9 { grid-column: 10; }
+.key-digit0 { grid-column: 11; }
+.key-minus { grid-column: 12; }
+.key-equal { grid-column: 13; }
+.key-backspace { grid-column: span 2; }
+
+/* Третья строка */
+.key-tab { grid-column: span 2; grid-row: 3 }
+.key-keyq { grid-column: 3; }
+.key-keyw { grid-column: 4; }
+.key-keye { grid-column: 5; }
+.key-keyr { grid-column: 6; }
+.key-keyt { grid-column: 7; }
+.key-keyy { grid-column: 8; }
+.key-keyu { grid-column: 9; }
+.key-keyi { grid-column: 10; }
+.key-keyo { grid-column: 11; }
+.key-keyp { grid-column: 12; }
+.key-bracketleft { grid-column: 13; }
+.key-bracketright { grid-column: 14; }
+.key-backslash { grid-column: 15; }
+
+/* Четвертая строка */
+.key-capslock { grid-column: span 2; grid-row: 4 }
+.key-keya { grid-column: 3; }
+.key-keys { grid-column: 4; }
+.key-keyd { grid-column: 5; }
+.key-keyf { grid-column: 6; }
+.key-keyg { grid-column: 7; }
+.key-keyh { grid-column: 8; }
+.key-keyj { grid-column: 9; }
+.key-keyk { grid-column: 10; }
+.key-keyl { grid-column: 11; }
+.key-semicolon { grid-column: 12; }
+.key-quote { grid-column: 13; }
+.key-enter { grid-column: span 2; }
+
+/* Пятая строка */
+.key-shiftleft { grid-column: span 2; grid-row: 5  }
+.key-keyz { grid-column: 3; }
+.key-keyx { grid-column: 4; }
+.key-keyc { grid-column: 5; }
+.key-keyv { grid-column: 6; }
+.key-keyb { grid-column: 7; }
+.key-keyn { grid-column: 8; }
+.key-keym { grid-column: 9; }
+.key-comma { grid-column: 10; }
+.key-period { grid-column: 11; }
+.key-slash { grid-column: 12; }
+.key-shiftright { grid-column: span 3; }
+
+/* Шестая строка */
+.key-ctrlleft { grid-column: 1; }
+.key-win { grid-column: 2; }
+.key-altleft { grid-column: 3; }
+.key-space { grid-column: span 9; }
+.key-altright { grid-column: 13; }
+.key-ctrlright { grid-column: span 2; }
+
+/* Стрелки */
+.key-arrowleft { grid-column: 17; }
+.key-arrowdown { grid-column: 18; }
+.key-arrowright { grid-column: 19; }
+.key-arrowup { grid-column: 18; }
+
+/* Дополнительные клавиши */
+.key-insert { grid-column: 17; }
+.key-delete { grid-column: 18; grid-row: 2 }
+.key-home { grid-column: 19; }
+.key-end { grid-column: 17; grid-row: 3 }
+.key-pageup { grid-column: 18; grid-row: 3 }
+.key-pagedown { grid-column: 19; grid-row: 3 }
+
+.key-numlock { grid-column: 21; grid-row: 2   }
+.key-numdivide { grid-column: 22; grid-row: 2  }
+.key-nummultiply { grid-column: 23; grid-row: 2  }
+.key-numsubtract { grid-column: 24; grid-row: 2 }
+.key-num7 { grid-column: 21; grid-row: 3  }
+.key-num8 { grid-column: 22; grid-row: 3  }
+.key-num9 { grid-column: 23; grid-row: 3  }
+.key-numadd { grid-column: 24; grid-row: 3 / 5  }
+.key-num4 { grid-column: 21; grid-row: 4  }
+.key-num5 { grid-column: 22; grid-row: 4  }
+.key-num6 { grid-column: 23; grid-row: 4  }
+.key-num1 { grid-column: 21; grid-row: 5  }
+.key-num2 { grid-column: 22; grid-row: 5  }
+.key-num3 { grid-column: 23; grid-row: 5  }
+.key-numenter { grid-column: 24 / 24; grid-row: 5 / 7; }
+.key-num0 { grid-column: 21 / 23; grid-row: 6  }
+.key-numperiod { grid-column: 23; grid-row: 6  }
+
+
